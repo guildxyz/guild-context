@@ -9,13 +9,13 @@ describe("context tests", () => {
     const testParam = 5;
 
     const foo = async (param: number) => {
-      const context = await import("../src/context");
+      const { default: context } = await import("../src/context");
       const ctx = context.get();
       expect(ctx).toEqual(expect.objectContaining(testCtx));
       return param * 2;
     };
 
-    const context = await import("../src/context");
+    const { default: context } = await import("../src/context");
     context.with(testCtx, async () => {
       const result = await foo(testParam);
       expect(result).toBe(testParam * 2);

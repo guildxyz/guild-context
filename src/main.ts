@@ -1,2 +1,2 @@
 export * from "./types";
-export * from "./context";
+export { default as context } from "./context";

@@ -11,4 +11,4 @@ const getContext = (): Meta => {
   return asyncLocalStorage.getStore() || {};
 };
 
-export { withContext as with, getContext as get };
+export default { with: withContext, get: getContext };
