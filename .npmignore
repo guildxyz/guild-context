@@ -2,5 +2,8 @@ others/
 node_modules/
 .vscode
 .env*
-src/
+/src/
 tests/
+.eslintignore
+.eslintrc.json
+tsconfig.json
